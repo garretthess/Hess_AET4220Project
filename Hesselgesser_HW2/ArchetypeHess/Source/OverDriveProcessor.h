@@ -15,14 +15,13 @@ class OverDriveProcessor : public AudioEffectProcessor
 {
     public:
     
-    float processSample(float x, const int channel) 
+    float processSample(float x, const int channel)  override
     {
         float y;
-        float z;
 //        arctan soft clipping
-        z = (2/M_PI) * atan(drive * x);
+        y = (2/M_PI) * atan(drive * x);
 //        full-wave rectification
-        y = abs(z);
+        y = abs(y);
         return y;
         
     }

@@ -10,6 +10,7 @@
 
 #include <JuceHeader.h>
 #include "OverDriveProcessor.h"
+#include "AudioEffectProcessor.h"
 
 //==============================================================================
 /**

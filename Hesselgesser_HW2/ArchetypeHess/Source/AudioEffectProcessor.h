@@ -16,12 +16,14 @@ class AudioEffectProcessor
 {
     public:
     
+    virtual ~AudioEffectProcessor() {};
+    
     // These are functions every audio effect will have
-    void prepare(double sampleRate);
+    virtual void prepare(double sampleRate);
     
     void processBuffer(juce::AudioBuffer<float> & buffer, const int channel, const int numSamples);
     
-    float processSample(float x, const int channel);
+    virtual float processSample(float x, const int channel) = 0;
     
     protected:
     // available in derived classes
