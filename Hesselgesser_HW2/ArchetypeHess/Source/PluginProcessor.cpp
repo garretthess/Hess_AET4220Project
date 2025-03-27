@@ -147,7 +147,7 @@ void ArchetypeHessAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer
 
     int N = buffer.getNumSamples();
     
-    drive.setDrive(5.f);
+    drive.setDrive(3.f);
     
     for (int channel = 0; channel < totalNumInputChannels; ++channel){
         drive.processBuffer(buffer, channel, N);
